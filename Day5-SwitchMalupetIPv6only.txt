@@ -500,7 +500,7 @@ standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
 
-@D1 para realworld:
+@D1 para realworld/GLOBE:
 config t
 Track 1 Int e1/0 line-protocol
 Int vlan 10
@@ -729,6 +729,7 @@ how to get certified:
 2. Lab: NAT and DHCP:
 
 3. ask sa CHAT: "latest reivewer"
+
 
 
 
