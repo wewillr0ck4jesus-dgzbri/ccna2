@@ -1,24 +1,24 @@
 DNS IPv4: verizon.com.ph
 DNS IPv6: epldt.com.ph
 
-TASK1: Cisco Security Fundamentals.
+TAS111: Cisco Security Fundamentals.
 cmd
-ping 10.k.1.10
+ping 10.11.1.10
 
-c>nmap -sP 10.k.1.0/24    c>nmap -sP 10.k.100.0/24
+c>nmap -sP 10.11.1.0/24    c>nmap -sP 10.11.100.0/24
 10.m.1.10?                   10.m.100.8
-TASK2: How to begin hacking Layer 3:
+TAS112: How to begin hac11ing Layer 3:
 HOw get all the IP address of your victim:
 
-nmap -v 10.k.1.10        nmap -v 10.k.100.8
+nmap -v 10.11.1.10        nmap -v 10.11.100.8
 is 139/445/21 open?          is 23,53,2000 open ?
 
-how to attack 139/445? because you DONT have a firewall!
+how to attac11 139/445? because you DONT have a firewall!
 
-net  use  \\10.k.1.10\ipc$  "attacks 139, and connects to it."
+net  use  \\10.11.1.10\ipc$  "attac11s 139, and connects to it."
 "privilege escalation"
 net  use x:  /delete
-net  use  x: \\10.k.1.10\c$
+net  use  x: \\10.11.1.10\c$
 
 SERVICES VS PORTS:
 WEB SERVER RUNS ON PORT 80, IF YOUR CLASSMATE PORT 80 OPEN? IT IS A WEB SERVER!
@@ -33,7 +33,7 @@ youporn.com
 pornhub.com 66.254.114.41
             161.49.21.
 redtube.com 66.254.114.23
-faketaxi.com 66.254.114.234
+fa11etaxi.com 66.254.114.234
 bangbros.com
 txxx.com
 bangbus.com  104.21.5.229
@@ -43,11 +43,11 @@ xhamster.com 88.208.29.180
 iyottube.com 68.235.37.3
              208.77.20.
 
-net  use  s: \\10.k.1.10\c$
-TASK1: PROTECT YOUR MOST IMPORTANT BUSINESS ASSET:
+net  use  s: \\10.11.1.10\c$
+TAS111: PROTECT YOUR MOST IMPORTANT BUSINESS ASSET:
 PROTECT YOUR PEOPLE/IT STAFF VS HARM. USE THE POWER
-OF CISCO ACCESS-LIST TO BLOCK ALL THE PORNSITES INT WORLD.
-FROM ENTERING YOUR NETWORK. 
+OF CISCO ACCESS-LIST TO BLOC11 ALL THE PORNSITES INT WORLD.
+FROM ENTERING YOUR NETWOR11. 
 step1: give Unlimited internet to EDGE:
 @edge
 CONFIG T
@@ -60,7 +60,7 @@ ip add 192.168.102.11 255.255.255.0
 config t
 IP ROUTE 0.0.0.0  0.0.0.0 208.8.8.2
 ip name-server 8.8.8.8 1.1.1.1
-ip domain lookup
+ip domain loo11up
 int gi 1
 no shut
 ip add 208.8.8.11 255.255.255.0
@@ -115,7 +115,7 @@ Int gi 1
  NO ip access-group 69 in
 end
 
-Task1.2: block admu.edu.ph, dlsu.edu.ph, ccp.edu.ph, ue.edu.ph
+Tas111.2: bloc11 admu.edu.ph, dlsu.edu.ph, ccp.edu.ph, ue.edu.ph
 
 ping www.dlsu.edu.ph 172.67.14.0   104.22.36.0
 ping www.ccp.edu.ph 50.6.160.0     
@@ -123,8 +123,8 @@ ping www.feu.edu.ph 184.168.125.0
 ping  www.ue.edu.ph 155.137.92.0  
 ping  www.yourschool.edu.ph = _________
 config t
-NO ip access-list standard NOISKUL
-ip access-list standard NOISKUL
+NO ip access-list standard NOIS11UL
+ip access-list standard NOIS11UL
 DENY   __.__.__.__   0.0.255.255
 DENY   __.__.__.__   0.0.255.255
 DENY   __.__.__.__   0.0.255.255
@@ -132,13 +132,13 @@ DENY   __.__.__.__   0.0.255.255
 DENY   __.__.__.__   0.0.255.255
 Permit Any
 Int Gi 1
- ip access-group NOISKUL in
+ ip access-group NOIS11UL in
 end
 YOUR COMPANY IS HAS VERY LOW INTERNET SPEED, BEC OF TORRENTS:
 www.thepiratebay.org   162.159.0.0     104.21.0.0
 www.limetorrents.com    172.67.0.0.   84.32.0.0
 www.freeanimeonline.com   76.223.0.0.  13.248.0.0.
-www.torlock2.com   104.21.0.0
+www.torloc112.com   104.21.0.0
 www.hentaisites.com 104.21.0.0   
 www.iptorrents.com  104.26.0.0.   95.211.0.0
 
@@ -158,7 +158,7 @@ Int Gi 1
  ip access-group NOTORS in
 end
 
-TASK2: USE STANDARD ACCESS-LIST TO BLOCK OTHER CONTRIES/CLASSMATE:
+TAS112: USE STANDARD ACCESS-LIST TO BLOC11 OTHER CONTRIES/CLASSMATE:
 config t
 NO ip access-list standard NOCLASSMATE1
 ip access-list standard NOCLASSMATE1
@@ -174,14 +174,14 @@ Int Gi 0/0/1
  ip access-group NOCLASSMATE1 in
  end
 
-TASK3: When you become a Security Analyst:
-Learn to Block the IPaddress from 3 "BAD" countries:
-NorthKorea, RUSSIA, China.= where all the Best hackers live.
+TAS113: When you become a Security Analyst:
+Learn to Bloc11 the IPaddress from 3 "BAD" countries:
+North11orea, RUSSIA, China.= where all the Best hac11ers live.
 runner-up: Nigeria: "love scam!"
 
-:Use standard Access-list[1 to 99] to block IP address from
+:Use standard Access-list[1 to 99] to bloc11 IP address from
 all evil countries:
-@edge: "version1: permit your friends, block all else!"
+@edge: "version1: permit your friends, bloc11 all else!"
 config t
 no access-list 1
 access-list 1 permit 10.12.0.0 0.0.255.255
@@ -192,7 +192,7 @@ access-list 1 permit 10.52.0.0 0.0.255.255
 access-list 1 deny ANY
 do sh ip access-list 1
 
-Version2: "deny/block k=kalaban!"
+Version2: "deny/bloc11 11=11alaban!"
 config t
 no access-list 2
 access-list 2 Deny 10.11.0.0 0.0.255.255
@@ -244,32 +244,32 @@ do sh ip access-list 5
 Interface Gi0/0/1
   no IP access-group 5 in
 
-TASK4: Experience a day as a
+TAS114: Experience a day as a
 How to be CyberSecurityEnginner/Analyst/PenetrationTester?
 
-How to attack:
+How to attac11:
 c> netstat -ano
 
 CUCM-12#show control-plane host open-ports
 
-Summary: NaUbos/Nalimas ang OnlineBankAccount
+Summary: NaUbos/Nalimas ang OnlineBan11Account
          CryptoWallet, mouse
 
 netstat  -s  -p  tcp
 
-TASK5: HOW TO START A CAREER IN NETWORK CYBERSECURITY FOR FREE!!
-intentionally hackable websites
-1. Hack The Box
+TAS115: HOW TO START A CAREER IN NETWOR11 CYBERSECURITY FOR FREE!!
+intentionally hac11able websites
+1. Hac11 The Box
 2. CTFlearn
 3. bWAPP
-4. HackThisSite
+4. Hac11ThisSite
 5. Google Gruyere
 6. Damn Vulnerable iOS App - DVIA
-7. Hellbound Hackers
+7. Hellbound Hac11ers
 8. OWASP Mutillidae II
-9. HackThis!!
+9. Hac11This!!
 
-task6: How to Make CISCOLINUX/ CUCM intentionally hackable to Learn
+tas116: How to Ma11e CISCOLINUX/ CUCM intentionally hac11able to Learn
 the Basics for Firewalls.
 before: nmap -v 10.m.100.8,  C> nmap 
 @Cucm: = fa 0/0/ or CSR1000v = gi3
@@ -297,7 +297,7 @@ voice service voip
   source-address 192.168.103.11 port 5060
   max-dn 12
   max-pool 12
-!Make Ping EASY
+!Ma11e Ping EASY
 ip host bet10.com 192.168.103.10
 ip host bet11.com 192.168.103.11
 ip host pc 10.m.1.10
@@ -310,25 +310,25 @@ ip host c8 10.m.50.8
 ip host sw 10.m.1.4
 ip host ed 10.m.m.1
 
-TASK7: Enter the World of BlueTeam: Protect vs Redteam: Attack, 
+TAS117: Enter the World of BlueTeam: Protect vs Redteam: Attac11, 
 BlueTeam: UTM: unified Threat management:
 1. firewall
 2. VPN
 3. EnterpriseAnti-Virus/ EndPoint Protection
 4. IntrusionDetection/IntrusionPrevention
-5  Network Admissions Control.
+5  Networ11 Admissions Control.
 Top 5 UTM: 1.FortinetFortigate: syet
            1.1: Palo Alto:superSuplado
-           2. Checkpoint
+           2. Chec11point
            3.4 Cisco/Fortinet
-           4. sophos/Mahirap Ka.
+           4. sophos/Mahirap 11a.
 
 Firewall Profile no.1: use ExtendedACL vs NamedExtendedAcl:
 ex.1: you are the Blue Team/SOC guys for pogo sites:
 ebet10.com open only http, https, ping:  80, 443, icmp
 ebet11.com open only dns, https, ssh     53, 443, 22 ==> 6 lines:
-  GOLDEN  FIREWALL FORMULA:  paloalto,fortinet,cisco,checkpoint.
-   protocol         hacker    victim       port
+  GOLDEN  FIREWALL FORMULA:  paloalto,fortinet,cisco,chec11point.
+   protocol         hac11er    victim       port
 tcp,udp,icmp,IP     Any      web310/11
 Config t
 ip host ebet10.com 192.168.103.10
@@ -337,7 +337,7 @@ service timestamps log datetime
 service timestamps debug datetime
 logging 10.m.1.10
 logging trap 5
-!!How to Sumbong to SPLUNK LOGS
+!!How to Sumbong to SPLUN11 LOGS
 NO IP access-list Extended NGFW1
 IP access-list Extended NGFW1
  Permit tcp Any host ebet10.com eq 80 log
@@ -380,13 +380,13 @@ NO IP access-list Extended NGFW3
 IP access-list Extended NGFW3
 
 
-TAKASSSSSSSSG:  control shift 6 bitaw X
+TA11ASSSSSSSSG:  control shift 6 bitaw X
 
 ex.2: you are the admin for pogo sites: WAF2
 www.web310.com open only ssh,dns, http
 www.web311.com open only telnet, ssh, https, ping/icmp => 7lines 
-  GOLDEN  FIREWALL FORMULA:  paloalto,fortinet,cisco,checkpoint.
-   protocol         hacker    victim       port
+  GOLDEN  FIREWALL FORMULA:  paloalto,fortinet,cisco,chec11point.
+   protocol         hac11er    victim       port
 config t
 NO IP access-list Extended WAF2
 IP access-list Extended WAF2
@@ -416,11 +416,11 @@ IP access-list Extended PRANING3
 Int Gi 3
   ip access-group PRANING3 in
 
-CYBERSECURITY TASK7: PROTECTING YOUR CORPORATE WEB APPS.
+CYBERSECURITY TAS117: PROTECTING YOUR CORPORATE WEB APPS.
 EX.1 CREATE A FIREWALL POLICY NAMED Policy1 TO OPEN
 WWW.WEB310.COM HAS HTTP AND HTTPS AS OPEN
 WWW.WEB311.COM HAS SSH AND DNS OPEN
-formula:       PROTOCOL    HACKER    VICTIM     PORT:
+formula:       PROTOCOL    HAC11ER    VICTIM     PORT:
 config t
 no ip access-list extended Policy1
 ip access-list extended Policy1
@@ -435,13 +435,13 @@ Interface Gi 3
 EX.2 CREATE A FIREWALL POLICY NAMED PROWEBAPP2 TO OPEN
 WWW.WEB310.COM HAS HTTPS,PING AS OPEN
 WWW.WEB311.COM HAS dns,PING OPEN
-formula:       PROTOCOL      HACKER      VICTIM       PORT:
+formula:       PROTOCOL      HAC11ER      VICTIM       PORT:
        tcp, udp, icmp, IP    any       web8,web9
 Ports: 
 7/tcp   open  echo, 
 9/tcp   open  discard
 13/tcp  open  daytime
-19/tcp  open  chargen  -- very delikado:
+19/tcp  open  chargen  -- very deli11ado:
 22/tcp  open  ssh
 23/tcp  open  telnet
 53/tcp  open  domain
@@ -476,7 +476,7 @@ Interface Gi 3
 EX.5 CREATE A FIREWALL POLICY NAMED "LASTFWP" TO OPEN
 WWW.WEB8.COM HAS ping, chargen, finger, http as Open = 4 lines
 WWW.WEB9.COM HAS ssh, telnet, daytime, dns, https as Open: = 5 lines
-if you canNOT make the Policy, you work in Jollibee.
+if you canNOT ma11e the Policy, you wor11 in Jollibee.
 config t
 no ip access-list extended LASTFWP
 ip access-list extended LASTFWP
@@ -495,7 +495,7 @@ Interface Gi 3
 EX.5 CREATE A FIREWALL POLICY NAMED "LASTFWP2" TO OPEN
 WWW.WEB8.COM HAS http, https as Open = 
 WWW.WEB9.COM HAS telnet, ssh, dns as Open: = 
-if you canNOT make the Policy, you work in Jollibee.
+if you canNOT ma11e the Policy, you wor11 in Jollibee.
 
 config t
 no ip access-list extended LASTFWP2
@@ -512,7 +512,7 @@ Interface Gi 3
 EX.6 CREATE A FIREWALL POLICY NAMED "LASTFWP3" TO OPEN
 WWW.WEB8.COM HAS https as Open = 
 WWW.WEB9.COM HAS ssh, as Open: = 
-if you canNOT make the Policy, you work in Jollibee.
+if you canNOT ma11e the Policy, you wor11 in Jollibee.
 config t
 no ip access-list extended LASTFWP3
 ip access-list extended LASTFWP3
@@ -522,15 +522,15 @@ Interface Gi 3
  ip access-group LASTFWP3 in
  do sh ip access-list LASTFWP3
 
-TASK8: CONFIGURING CISCO NETWORK SERVICES:
-NETWORK TIME PROTOCOL OR NTP 
+TAS118: CONFIGURING CISCO NETWOR11 SERVICES:
+NETWOR11 TIME PROTOCOL OR NTP 
 is a layer 7 protocol using UDP 123
 configure your VPNPH to use time.google.com servers in USA:
 config t
 ntp server 216.239.35.8
 end
 show ntp associations
-How to Make CISCO DEVICE A MASTER time servers: tagaBigay ng Oras:
+How to Ma11e CISCO DEVICE A MASTER time servers: tagaBigay ng Oras:
 config t
 ntp master 1
 ntp update-calendar
@@ -540,39 +540,39 @@ GIVE IP ADDRESS TO LINUX BLDGONE AND BLDGTWO:
 sudo su
 CONF-1/bldg1:
 sudo su
-ifconfig eth0 192.168.103.21 netmask 255.255.255.0 up
+ifconfig eth0 192.168.103.21 netmas11 255.255.255.0 up
 route add default gw 192.168.103.11
 ping 192.168.103.11
 Confi-2/bldg2:
 sudo su
-ifconfig eth0 192.168.103.22 netmask 255.255.255.0 up
+ifconfig eth0 192.168.103.22 netmas11 255.255.255.0 up
 route add default gw 192.168.103.11
 ping 192.168.103.11
 bldg3:
 sudo su
-ifconfig eth0 192.168.103.23 netmask 255.255.255.0 up
+ifconfig eth0 192.168.103.23 netmas11 255.255.255.0 up
 route add default gw 192.168.103.11
 
 ping 8.8.8.8   1.1.1.1  4.2.2.2  8.8.4.4
 
-TASK9: NAT: NETWORK ADDRESS TRANSLATION SERVICE: BIGAY INTERNET/ ITAGO ANG TOTOONG IP ADDRESS./1500
+TAS119: NAT: NETWOR11 ADDRESS TRANSLATION SERVICE: BIGAY INTERNET/ ITAGO ANG TOTOONG IP ADDRESS./1500
 nat, proxy, hotspot, tethering, = PENGE INTERNET
 Give Internet to your Entire building USING CISCO:
 insideLocal            outsideLocal
 192.168.103.21        208.8.8.51
 192.168.103.22        208.8.8.52
 192.168.103.23        bahala Na si batman
-network address translation: NAT GIVE internet to 
+networ11 address translation: NAT GIVE internet to 
 entire companies/buildings.
 linBld2:
 sudo su
-ifconfig eth0 10.10.10.100 netmask 255.255.255.0 up
+ifconfig eth0 10.10.10.100 netmas11 255.255.255.0 up
 route add default gw 10.10.10.11
 ping 10.10.10.11
 
 linBld3:
 sudo su
-ifconfig eth0 192.168.103.100 netmask 255.255.255.0 up
+ifconfig eth0 192.168.103.100 netmas11 255.255.255.0 up
 route add default gw 192.168.103.11
 ping 192.168.103.11
 
@@ -623,9 +623,9 @@ IP nat inside source list 8 int gi 1 Overload
 end
 show ip nat translation
 
-victim: nmap -v 200.0.0.100+k
+victim: nmap -v 200.0.0.100+11
 
-ExamLab Training: Make a PortAddressTranslation:
+ExamLab Training: Ma11e a PortAddressTranslation:
 10.m.1.9 22 --> 200.0.0.100+m 3022 =
 10.m.1.10 80 --> 200.0.0.100+m 8088 = 
 10.m.1.11 53 --> 200.0.0.100+m 4053 =
@@ -635,13 +635,13 @@ IP Nat inside source static tcp 10.12.1.10 80 200.0.0.112 8088
 IP Nat inside source static tcp 10.12.1.11 53 200.0.0.112 4053
 do sh ip nat translation
 
-CONFIGURING CISCO NETWORK SERVICES: 
-1. NETWORK TIME PROTOCOL: NTP uses udp port 123 makes all devices use same time.
+CONFIGURING CISCO NETWOR11 SERVICES: 
+1. NETWOR11 TIME PROTOCOL: NTP uses udp port 123 ma11es all devices use same time.
 cmd
 C:\>nmap -sU time.google.com
 PORT      STATE  SERVICE
 123/udp   open   ntp
-33459/udp closed unknown
+33459/udp closed un11nown
 
 Configure R1-Fw to use time.google.com ntp server.
 config t
@@ -651,7 +651,7 @@ sh ntp assoc
 sh ntp status
 show ntp associations detail
 
-#real world skills: site to site vpn tunnel:
+#real world s11ills: site to site vpn tunnel:
 step1: prepare FWvpnPH:
 @edge
 CONFIG T
@@ -664,7 +664,7 @@ Int Gi 2
 no shut
 ip add 192.168.102.11 255.255.255.0
 ip name-server 8.8.8.8 1.1.1.1
-ip domain-lookup
+ip domain-loo11up
 int gi 1
 no shut
 ip add 208.8.8.11 255.255.255.0
@@ -685,7 +685,7 @@ Int Gi 2
 no shut
 ip add 192.168.102.12 255.255.255.0
 ip name-server 8.8.8.8 1.1.1.1
-ip domain-lookup
+ip domain-loo11up
 int gi 1
 no shut
 ip add 208.8.8.12 255.255.255.0
@@ -696,13 +696,13 @@ do sh ip int brief
 
 bldg1inPINAS
 sudo su
-ifconfig eth0 10.10.10.10 netmask 255.255.255.0 up
+ifconfig eth0 10.10.10.10 netmas11 255.255.255.0 up
 route add default gw 10.10.10.1
 ping 10.10.10.1
 
 bldg2:inJAPAN
 sudo su
-ifconfig eth0 20.20.20.20 netmask 255.255.255.0 up
+ifconfig eth0 20.20.20.20 netmas11 255.255.255.0 up
 route add default gw 20.20.20.1
 ping 20.20.20.1
 
@@ -711,7 +711,7 @@ stepS: domainName, rsa 1024/2048, ssh config:
 config t
 ip domain-name rivanit.com
 username rob privilege 15 secret pass
-crypto key generate rsa
+crypto 11ey generate rsa
 ip ssh version 2
 ip ssh time-out 120
 line vty 0 30
@@ -721,13 +721,13 @@ end
 IPSEC VPN SITE TO SITE:
 linBld2:
 sudo su
-ifconfig eth0 10.10.10.100 netmask 255.255.255.0 up
+ifconfig eth0 10.10.10.100 netmas11 255.255.255.0 up
 route add default gw 10.10.10.11
 ping 10.10.10.11
 
 linBld3:
 sudo su
-ifconfig eth0 10.20.20.100 netmask 255.255.255.0 up
+ifconfig eth0 10.20.20.100 netmas11 255.255.255.0 up
 route add default gw 10.20.20.12
 ping 10.20.20.12
 @r2-fwvPN:
@@ -736,7 +736,7 @@ int gi 3
  ip add 10.20.20.12 255.255.255.0
 end
 
-TASK10: DO YOU HAVE TO REPLACED BY A.I AT WORK? REPLACED BY
+TAS1110: DO YOU HAVE TO REPLACED BY A.I AT WOR11? REPLACED BY
 YOUNGER, SMARTER, CHEAPER NEW HIRES?? HOW TO BE UNTOUCHABLE EMPLOYEE?
 IF YOU WANT HAYUP/SIX DIGITS SWELDO/untouchable status.
 you need HAYUP/SIX DIGITS SWELDO Habits.
@@ -781,8 +781,8 @@ you need HAYUP/SIX DIGITS SWELDO Habits.
 
 
 
-TASK8: CONGigure YOur first Packet Filter Firewall.
- FORMULA: "  Protocol    hacker   victim  Port "
+TAS118: CONGigure YOur first Pac11et Filter Firewall.
+ FORMULA: "  Protocol    hac11er   victim  Port "
         tcp,udp,icmp,IP   "any"   cm/cm2   
 21/tcp   open     ftp
 22/tcp   open     ssh
@@ -800,7 +800,7 @@ TASK8: CONGigure YOur first Packet Filter Firewall.
 3306/tcp open     mysql
 5060/tcp open     sip
 
-ex.1: Make a Firewall so that we can meet this Policy:
+ex.1: Ma11e a Firewall so that we can meet this Policy:
 cm is a dns,ssh,callmanager server allow: 53,22,2000
 cm2 is web,and SecureWeb server  allow: 80/443
 create a Policy to meet his condition.
@@ -818,7 +818,7 @@ IP access-list Extended fwpolicy1
   ip access-group fwpolicy1 IN
   end
 
-ex.2: Make a Firewall so that we can meet this fwpolicy2:
+ex.2: Ma11e a Firewall so that we can meet this fwpolicy2:
 cm is a ssh,https,web
 cm2 is https, 23, dns
 create a fwpolicy2 Policy to meet his condition.
@@ -828,7 +828,7 @@ nmap -Pn -v cm       nmap Pn -v cm2
 443                    23
 80                      53
 
-ex3: Make a Firewall so that we can meet this fwpolicy3:
+ex3: Ma11e a Firewall so that we can meet this fwpolicy3:
 cm is a ping,cucm/sccp,
 cm2 is  ssh,web,dns,finger
 create a fwpolicy3 Policy to meet his condition.
@@ -852,7 +852,7 @@ REMOVE POLICY:
   NO ip access-group fwpolicy3 in
 end
 
-TASK5: MULTIPLE HACKER MULTIPLE VICTIM:
+TAS115: MULTIPLE HAC11ER MULTIPLE VICTIM:
 Create a Policy for these conditions:
 pc can ping,telnet cm = 2lines
 pc can web,dns cm2 = 2lines
@@ -872,7 +872,7 @@ NO ip access-group extended fwpolicy5
 end
 
 How good you are as a CyberSecurity Engineer:
-TASK7: MULTIPLE HACKER MULTIPLE VICTIM:
+TAS117: MULTIPLE HAC11ER MULTIPLE VICTIM:
 Create a Policy for these conditions:
 pc can dns,https,ssh cm = 3lines  : nmap -v cm
 pc can ping,telnet,dns cm2 = 3lines: nmap -v cm2
@@ -893,12 +893,12 @@ NO ip access-group extended fwpolicy6
    ip access-group fwpolicy6 iN
 end
 
-Final Example: Make a Policy7 with condition:
+Final Example: Ma11e a Policy7 with condition:
 p2 can ping,sccp  cm  = 1line   : 2L
 p1 can sccp cm = 1line           : 1L
 pc can ping,dns,ssh cm		: 3L nmap = 53,22
 pc can http,https,ssh cm2	: 3l nmap = 80,443,ssh
-" proof it works: Buhay 2 phone, pero ping p2 lang!"
+" proof it wor11s: Buhay 2 phone, pero ping p2 lang!"
 config t
 NO ip access-group extended fwpolicy7
  ip access-group extended fwpolicy7
@@ -917,7 +917,7 @@ Remove the Firewall
    NO ip access-group fwpolicy7 iN
 end
 
-TASK8: CREATING A WEB PROXY OR HIDING BEHIND NAT:
+TAS118: CREATING A WEB PROXY OR HIDING BEHIND NAT:
 www.sti.edu.ph:      vs     www.dlsu.edu.ph:
 @EDGE:
 config t
@@ -932,9 +932,9 @@ IP nat inside source list 8 int gi 0/0/1 Overload
 end
 show ip nat translation
 
-victim: nmap -v 200.0.0.100+k
+victim: nmap -v 200.0.0.100+11
 
-ExamLab Training: Make a PortAddressTranslation:
+ExamLab Training: Ma11e a PortAddressTranslation:
 10.m.1.9 22 --> 200.0.0.100+m 3022 =
 10.m.1.10 80 --> 200.0.0.100+m 8088 = 
 10.m.1.11 53 --> 200.0.0.100+m 4053 =
@@ -944,7 +944,7 @@ IP Nat inside source static tcp 10.12.1.10 80 200.0.0.112 8088
 IP Nat inside source static tcp 10.12.1.11 53 200.0.0.112 4053
 do sh ip nat translation
 
-TASK9: how to use Network Address Translation to 
+TAS119: how to use Networ11 Address Translation to 
 give Internet to your entire Company:
 step1: learn to get internet:
 ping 8.8.8.8: connection to Internet
@@ -963,20 +963,20 @@ ip nat inside source list 8 int gi 0/0/1 overload
 test1: ping 8.8.8.8: connection to Internet: LUSOT
 test2: ping www.google.com: connection to DNS internet: sablay!
 
-how to block all PornSites:for FREE: DNS
+how to bloc11 all PornSites:for FREE: DNS
 superBilis porn: dns 1.1.1.1 / 8.8.8.8
                     208.67.222.222/208.67.220.220
 
 pornFREE: 208.67.222.123/208.67.220.123
 ipconfig /flushdns
 
-TASK10: How to be a NetworkEngineer in 2023 till 2027
+TAS1110: How to be a Networ11Engineer in 2023 till 2027
 gi1JP: 192.168.233.185
 gi1PH: 192.168.233.186
-Network Engineer = CCNA, + python + dockerContainer
+Networ11 Engineer = CCNA, + python + doc11erContainer
                    + RESTapi Programming
 
-how to enable Python and Docker in Cisco:
+how to enable Python and Doc11er in Cisco:
 VPNjpn:
 config t
 iox
@@ -987,13 +987,13 @@ no shut
 Int VirtualPortGroup0
  ip add 192.168.35.1 255.255.255.0
  ip nat inside
-ip nat inside source list DOCKERS int gi 2 overload
-ip access-list standard DOCKERS
+ip nat inside source list DOC11ERS int gi 2 overload
+ip access-list standard DOC11ERS
  PERMIT 192.168.0.0 0.0.255.255
 !
 app-hosting appid guestshell
  app-vnic gateway1 virtualportgroup 0 guest-interface 0
-   guest-ipaddress 192.168.35.2 netmask 255.255.255.0
+   guest-ipaddress 192.168.35.2 netmas11 255.255.255.0
       exit
       app-default-gateway 192.168.35.1 guest-interface 0
       name-server0 1.1.1.1
@@ -1008,13 +1008,13 @@ UNANGJAPAN: WALA
 
 3rdJapan: guestshell enable -> guestshell run bash
 
-TASK11: BASIC linux commands:
+TAS1111: BASIC linux commands:
 sudo su = become root/superbossing
 
 ls / = list all folders
 ip addr = what is your ip address. 
 
-TASK12: Basic Python Commands:
+TAS1112: Basic Python Commands:
 CISCO: show version
 python:  cli.executep(c)
 import cli
@@ -1023,7 +1023,7 @@ for c in cfg:
     cli.executep(cfg)
 
 ex.2: Palit name sa Cisco VS python:
-cisco: hostname CiscoAKO2
+cisco: hostname CiscoA11O2
 python:
 import cli
 cfg1 = '''hostname PYTHONito'''
@@ -1058,11 +1058,11 @@ end
 cli.configurep(cfg3)
 
 
-Network Engineers With Python Skills are PAID 2/3xMore!
+Networ11 Engineers With Python S11ills are PAID 2/3xMore!
 
-TASK12: RESTapi: Representational State Transfer
+TAS1112: RESTapi: Representational State Transfer
                  Application Programming Interface
-Enable RESTapi and YAML: YetAnotherMarkupLanGuage
+Enable RESTapi and YAML: YetAnotherMar11upLanGuage
                    HTML: 
 VPNJP:
 config t
@@ -1079,11 +1079,12 @@ Get, Auth:basicAuthention
      Content-Type: application/yang-data+json
 
 https://192.168.233.158/restconf/data/ietf-interfaces:interfaces
-Gawa ng LOOPBACK sa RESTapi:
-https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopback
+Gawa ng LOOPBAC11 sa RESTapi:
+https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopbac11
 
-HomeWork for the Hardest Day in CCNA: 
-CSr, linuxdocker, pythondocker, Postman: RestApi.
+HomeWor11 for the Hardest Day in CCNA: 
+CSr, linuxdoc11er, pythondoc11er, Postman: RestApi.
+
 
 
 
